@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from typing import List
 
 PROJECT_NAME = "housing-predictor"
-VERSION = '0.0.1'
+VERSION = '0.0.3'
 AUTHOR = 'Yashpal Sharma N'
 DESCRIPTION="This is a first FSDS Nov batch Machine Learning Project"
 
@@ -22,7 +22,9 @@ def get_requirements_list() -> List[str]:
         requirement_list = [requirement_name.replace("\n", "") for requirement_name in requirement_list]
         if HYPHEN_E_DOT in requirement_list:
             requirement_list.remove(HYPHEN_E_DOT)
-        return requirement_list
+        print(requirement_list)
+    
+    return requirement_list
 
 
 setup(
